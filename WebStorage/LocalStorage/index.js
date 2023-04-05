@@ -33,14 +33,22 @@ button.addEventListener('click', () => {
 
 });
 
+// // sessionStorage 
+// sessionStorage.setItem(a,input.value);
+// output.innerHTML +=   ` <br> ${sessionStorage.getItem(a)}`;
 
 
 
 
 
+let manage = {person: [{age:'18',name:'ali'}],family:'karbakhsh'};
 
 
+localStorage.setItem('person',JSON.stringify(manage))
 
+const mna = localStorage.getItem('person');
+const mmw = JSON.parse(mna);
+console.log(mmw.person[0].age);
 
 
 
