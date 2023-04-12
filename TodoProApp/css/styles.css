@@ -42,7 +42,8 @@ body.light {
   padding: 0;
   box-sizing: border-box;
   direction: rtl;
-  font-family: 'Markazi Text', serif;
+  font-family: vazir !important;
+  
 
 }
 
@@ -107,6 +108,7 @@ label {
   padding: 1.9rem 2rem;
   gap: 2rem;
 }
+
 
 /* HEADER'S CARD */
 
@@ -376,4 +378,11 @@ footer {
   header.card h1 {
     font-size: calc(var(--base-font) * 1.5);
   }
+}
+
+.fall{
+  display: none !important;
+}
+.card.draging{
+  opacity: 0.2;
 }
