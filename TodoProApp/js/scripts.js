@@ -4,6 +4,7 @@ const body = document.querySelector("body");
 const img = BtnThemeSwitcher.children[0];
 const ul = document.querySelector(".todos");
 const filter = document.querySelector(".filter");
+const btnFilter = document.querySelector("#clear-completed")
 
 
 // localStorage 
@@ -61,13 +62,14 @@ function main() {
   })
 
   //filteringv ************************************************************************
-  filter.addEventListener('click',(e)=>{
-    const id =e.target.id
+  filter.addEventListener('click', (e) => {
+    const id = e.target.id
     if (id) {
-        document.querySelector(".on").classList.remove("on");
-        e.target.classList.add("on");
-        ul.className = `todos ${id}`
+      document.querySelector(".on").classList.remove("on");
+      e.target.classList.add("on");
+      ul.className = `todos ${id}`
     }
+
 
 
   })
@@ -86,6 +88,21 @@ function main() {
     }
 
   })
+
+  btnFilter.addEventListener("click", () => {
+    var aryIndex = []
+    document.querySelectorAll(".card.checked").forEach((card) => {
+      aryIndex.push(
+        [...document.querySelectorAll(".todos .card")].indexOf(card)
+      )
+
+      card.classList.add("fall");
+      card.addEventListener('animationend', () => {
+        card.remove();
+      });
+    });
+    removeMultipelTodos(aryIndex);
+  })
 }
 
 // remove todo 
@@ -93,6 +110,17 @@ function reomveTodo(index) {
   const todos = JSON.parse(localStorage.getItem("todos"));
   todos.splice(index, 1);
   localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+function removeMultipelTodos(indexes) {
+  var todos = JSON.parse(localStorage.getItem("todos"));
+
+  todos = todos.filter((todo, index) => {
+    return !indexes.includes(index);
+  });
+  localStorage.setItem("todos",JSON.stringify(todos))
+
+  console.log(todos)
 }
 
 // is complete todo
