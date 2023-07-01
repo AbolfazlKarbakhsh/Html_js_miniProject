@@ -1,0 +1,32 @@
+h1 {
+  padding: 10px;
+  color: black;
+  background-color: rgb(0, 115, 255);
+  color: #ffffff;
+  font-size: 3rem;
+}
+h1 span {
+  color: rgb(255, 255, 255);
+  background: #4c3d66;
+  font-size: 2rem;
+  padding: 3px;
+  border-radius: 0 10px;
+}
+h1 a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background: #ff0000;
+  font-size: 2rem;
+  padding: 3px;
+  border-radius: 0 10px;
+}
+
+h2 {
+  color: orange;
+  background: #272727;
+  font-size: 2rem;
+  padding: 3px;
+  border-radius: 0 10px;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,50 @@
+@media (min-width:576px) {
+    .w-sm-auto{
+        width: auto !important;
+    }
+    
+}
+.w-100-p{
+    width: 100%;
+}
+
+.pointer{
+    cursor: pointer;
+}
+*{
+    transition: all 0.3s;
+    /* font-family: vazir; */
+}
+li a {
+    color: #868686 !important;
+}
+*{
+    transition: display 1s;
+}
+i:hover{
+    color: #868686 !important;
+}
+
+.rtl{
+    direction: rtl !important;
+}
+
+.shadow{
+    background: #272727d7;
+}
+
+.z{
+    z-index: 100000;
+}
+@media (max-width:576px) {
+    .w-sm-25{
+        width: 100%!important;
+    }    
+}
+
+.w1000{
+    width: 25%;
+}
+
+body{
+}

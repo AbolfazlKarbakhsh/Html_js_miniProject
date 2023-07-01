@@ -1,0 +1,266 @@
+@import "var";
+@import "mixin";
+
+* {
+    @include Overal();
+}
+
+body {
+    background: $bgColor;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header {
+    @include flex(space-between, center);
+    padding: .8rem 1rem;
+    background: $primaryColor;
+
+    h1 {
+        @include textStyle(1.3rem, bold, $SecendoryColor);
+        text-transform: capitalize;
+        margin-left: 1.5rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        display: none;
+
+        span {
+            display: inline-block;
+            height: 3px;
+            width: 20px;
+            margin: 2px;
+            background: $SecendoryColor;
+        }
+
+    }
+}
+
+.navbar {
+    @include flex(inherit, center);
+
+    img {
+        width: 40px;
+        border-radius: 50%;
+    }
+
+    nav {
+        margin-right: 40px;
+    }
+
+    ul {
+        list-style-type: none;
+
+
+    }
+
+    a {
+        padding: 8px;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: all .3s;
+
+        &:hover {
+            color: $textColor !important;
+        }
+
+        @include textStyle(1rem, bold, $SecendoryColor);
+
+    }
+
+}
+
+.main {
+    @include flex(space-between, center);
+
+    margin: 2rem 3rem;
+
+    aside {
+        width: 25%;
+        margin-right: 25px;
+        display: flex;
+        flex-direction: column;
+
+        div {
+            @include BoxSide($primaryColor, $SecendoryColor, .8rem);
+            @include textStyle(1rem, bold, $SecendoryColor);
+        }
+
+        @include bodyStyle();
+        @include boxStyle();
+    }
+
+
+    main {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        @include bodyStyle();
+        @include boxStyle();
+
+        img {
+            width: 200px;
+            border-radius: .8rem;
+        }
+
+        h2 {
+            @include textStyle(4rem, bold, $primaryColor);
+            margin-top: 2rem 0 3rem;
+        }
+
+        p {
+            @include textStyle(2rem, bold, $textColor);
+
+        }
+    }
+}
+
+.cards{
+    width: calc(100% - 6rem);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.card{
+    @include boxStyle();
+    img{
+    width: 100%;
+    display: block;
+    }
+    .card-body{
+        line-height: 1.5rem;
+        padding: 15px;
+        background: $SecendoryColor;
+
+        p{
+            margin: 10px 0;
+            @include textStyle(1.1,100,$textColor);
+        }
+        span{
+            display: inline-block;
+            margin-top:10px; 
+            @include textStyle(.9rem,bold,$primaryColor);
+        }
+    }
+}
+
+footer{
+    @include flex(space-between, center);
+    padding:2rem 3rem;
+    margin-top: 30px;
+    background: $primaryColor;
+    .summary{
+        width: 50%;
+        p{
+            @include textStyle(1.2rem,100,$SecendoryColor);
+        }
+    }
+    .links{
+
+        width: 50%;
+        padding: 0 5rem;
+        a{
+            @include textStyle(1.2rem,bold,$SecendoryColor);
+            text-decoration: none;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include respansiveMin(1400px){
+    body{
+        width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+
+@include respansive(1200px){
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@include respansive(768px) {
+    .hamburger {
+        display: flex !important;
+    }
+
+    .navbar {
+        display: none !important;
+    }
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        margin: 1rem;
+
+        main {
+            width: 90%;
+            height: 500px;
+            margin: 1rem;
+            margin-bottom: 20px;
+            h2 {
+                margin-top: .6rem;
+
+                @include textStyle(2rem, bold, $primaryColor);
+                margin-top: 2rem 0 3rem;
+            }
+    
+            p {
+                margin-top: .6rem;
+                @include textStyle(1rem, bold, $textColor);
+    
+            }
+        }
+
+        aside{
+            width: calc(100% - 2rem);
+            height: 600px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+
+    footer{
+        width:100% ;
+        flex-direction: column;
+        padding: 2rem 0 !important;
+        .links  , .summary{
+            padding: 0;
+            margin-top: 1rem;
+            width: 90%;
+        }
+    }
+
+}

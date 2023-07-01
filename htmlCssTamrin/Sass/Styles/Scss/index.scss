@@ -1,0 +1,70 @@
+@import "../Scss/_var.scss";
+@import "../Scss/_mixing.scss";
+
+h1 {
+    padding: 10px;
+    background-color: $priamaryColor;
+    color: $color;
+    font-size: $headSize;
+    transition: all 0.1s;
+
+    &:hover {
+        color: #4c3d66;
+    }
+
+    span {
+        @include text(rgb(255, 255, 255), #4c3d66);
+
+    }
+
+    a {
+        text-decoration: none;
+        @include text(rgb(255, 255, 255), #ff0000);
+    }
+}
+
+@if () {}
+
+h2 {
+    @include text(orange, #272727);
+
+}
+
+h1 {
+    @include query("997px", "min-width") {
+        width: 997px;
+        margin: 0 auto;
+    }
+
+    @include query("997px", "max-width") {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    @if(2==3) {
+        padding: 100px;
+    }
+}
+
+h2 {
+    @extend h1;
+}
+
+
+@for $item from 1 through 5 {
+    .a#{$item} {
+        @include text(#fff, #272727);
+        @extend h1;
+
+    }
+}
+
+// $item:5;
+// @while($item >= 0){
+//     .a#{$item} {
+//         // @include text(#fff, #272727);
+//         // @extend h1;
+//         color:red;
+//     }
+//     $item: $item - 1;
+// }

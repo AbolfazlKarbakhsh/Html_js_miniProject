@@ -1,0 +1,130 @@
+@font-face {
+    font-family: IRANSans;
+    src: url('../fonts/IRANSans/IRANSansWeb.woff') format('woff');
+}
+
+* {
+    font-family: IRANSans;
+    direction: rtl;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+:root {
+    --gray-body: #d7dce8;
+    --blue: #272727dc;
+    --gray-main: #e3e6f1;
+    --main-white: #ffff;
+    --main-dark: #3c37ff;
+}
+
+body {
+    /* background: url(../images/pattern.png) repeat; */
+    background-color: var(--gray-body);
+}
+.bg-darck{
+    background: var(--blue);
+    color: white;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.ddd-none{
+    display: none;
+}
+
+.navbar-collapse{
+    flex-basis: inherit !important;
+    flex-grow: inherit !important;
+}
+@media (max-width:1999.98px) {
+    .container {
+        width: 992px;
+    }
+   
+}
+
+@media (max-width:991.98px) {
+    .container {
+        width: 768px;
+    }
+
+
+}
+
+@media (max-width:767.98px) {
+    .container {
+        width: 576px;
+    }
+
+   
+
+    .auth-right {
+        flex: 0 0 100%;
+        padding: 0 20px ;
+        margin: 5px;
+        height: 500px;
+        margin: 10px 0;
+        display: flex !important;
+    }
+
+    .auth-left {
+        width: 100%;
+        padding: 0 10px;
+        margin: 0 ;
+    }
+    .d-none {
+        transition: all 1s ease-in-out;
+        display: none !important;
+    }
+    .ddd-none{
+        display: inherit;
+    }
+    
+}
+
+@media (max-width:576px) {
+    .container {
+        width: calc(100% - 30px);
+        padding: 0 15px;
+
+    }
+
+    .form-group {
+        display: block;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 0 auto !important;
+    }
+
+
+}
+
+.badge {
+    background: var(--blue);
+    padding: 4px;
+    border-radius: 10px;
+    color: white;
+    margin: 0 5px;
+}
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h{
+    height: calc(45vw - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

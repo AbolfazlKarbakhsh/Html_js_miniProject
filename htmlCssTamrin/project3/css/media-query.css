@@ -1,0 +1,121 @@
+@media (min-width:576px) {
+  
+    .search-icon {
+        background-color: #ff4a52;
+        display: flex;
+        position: absolute;
+        right: 70;
+        top: 0;
+        bottom: 0;
+    }
+
+    .search-icon *,
+    .drop-down-menu * {
+        color: white !important;
+
+    }
+
+    .drop-down-menu {
+        background-color: #1ec6b6;
+        display: flex;
+        width: 45px;
+        position: absolute;
+        right: 20;
+        top: 0;
+        bottom: 0;
+    }
+    nav ul {
+    margin-top: 0px !important;
+
+    }
+    .slider-text{
+    height: 41vw !important; 
+    }
+    .slider-btn{
+        font-size: 1.7vw !important;
+    }
+   
+}
+
+@media (min-width:768px) {
+    footer{
+        flex-direction: row;
+        justify-content: space-evenly;
+    
+        }
+
+}
+
+@media (min-width:992px) {
+    nav ul li{
+        margin-right: 35px;
+        font-size: 1.1em;
+        margin-top: 10px;
+        text-align: center;
+        border-bottom: none !important;
+        width: 100%;
+        padding: 0 !important;
+        margin-bottom: 20px;
+        margin-top: 13px;
+    }
+    nav ul  {
+        display: inline-block !important;
+        display: flex !important;
+    }
+    nav {
+        background: transparent;
+        position: inherit !important;
+        inset: 0;
+        z-index: 1;
+        width: inherit !important;
+        display: block !important;
+        justify-content: center;
+        overflow-y: hidden;
+    }
+    nav ul li {
+        display: inline-block !important;
+    }
+
+
+    .drop-down-menu {
+        display: none;
+    }
+    .search-ber{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1rem;
+    }
+    .search-form{
+        flex-direction: row;
+        width: 78%;
+        margin: 0;
+    }
+    .search-form input{
+        padding: 17px;
+    }
+}
+
+@media (min-width:1200px) {
+
+    .news-letter-container{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .news-letter-form{
+        flex-direction: row !important;
+        width: 600px;
+    }
+    .news-letter-btn{
+        margin-left: 10px;
+        width: auto !important;
+    }
+    .search-icon {
+        width: 100px;
+    }
+
+    .popular-container{
+        margin: 0 auto;
+       width: 1000px !important;
+    }
+}

@@ -1,0 +1,20 @@
+@mixin text($color,$bg) {
+    color: $color;
+    background: $bg;
+    font-size: 2rem;
+    padding: 3px;
+    border-radius: 0 10px;
+    &:hover{
+        color: green;
+    }
+
+    width: (calc(100% - 100px));
+    margin: 20px auto;
+}
+
+
+@mixin query ($width,$prop){
+    @media ($prop:$width) {
+        @content;
+    }
+}
